@@ -25,3 +25,10 @@ C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcore
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.RazorTargetAssemblyInfo.cache
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.RazorTargetAssemblyInfo.cs
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\bin\Debug\netcoreapp2.1\CelebrationCinema.pdb
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\bin\Debug\netcoreapp2.1\CelebrationCinema.Views.dll
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\bin\Debug\netcoreapp2.1\CelebrationCinema.Views.pdb
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.Views.pdb
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.dll
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.pdb
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.csproj.CopyComplete
