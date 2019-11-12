@@ -8,17 +8,15 @@ using CelebrationCinema.Models;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using Microsoft.Extensions.Logging;
+using CelebrationCinema.Models;
 
-
-namespace CelebrationAPI.Controllers
+namespace CelebrationCinema.Controllers
 {
     public class HomeController : Controller
     {
-        CelebrationContext db = new CelebrationContext();
-        MoviesFavorite favoritesMovies = new MoviesFavorite();
-        List<MoviesFavorite> movies = new List<MoviesFavorite>();
-
-
+        MoviesContext db = new MoviesContext();
+        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -44,7 +42,7 @@ namespace CelebrationAPI.Controllers
             return output;
         }
        
-       public IActionResult MovieDetails(string Title)
+       public IActionResult MoviesDetail(string Title)
         {
             //TODO: Add if validation in case the movie is not listed or user missspells
             string text = CallMovieAPI(Title);
@@ -57,21 +55,21 @@ namespace CelebrationAPI.Controllers
         
         //  this past is still not working
         // TODO: add to Favorites 
-       [HttpPost]
-        public async Task<IActionResult> Favorites(MoviesFavorite u)
-        {
-            if (ModelState.IsValid)
-            {
-                db.MoviesFavorite.Add(u);
-                 db.SaveChangesAsync();
+       //[HttpPost]
+       // public async Task<IActionResult> Favorites(Movies u)
+       // {
+       //     if (ModelState.IsValid)
+       //     {
+       //         db.Movies.Add(u);
+       //          db.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Favorites));
-            }
-            else
-            {
-                return View(u);
-            }
-        }
+       //         return RedirectToAction(nameof(Favorites));
+       //     }
+       //     else
+       //     {
+       //         return View(u);
+       //     }
+       // }
         
         public IActionResult Index()
         {
