@@ -1,4 +1,3 @@
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 
-namespace CelebtationCinema.Models
+namespace CelebrationCinema.Models
 {
     public class Movies
     {
@@ -26,14 +25,15 @@ namespace CelebtationCinema.Models
         }
 
         public Movies(JToken u)
-        {            
-            this.Title = u["title"].ToString();
-            this.Year = int.Parse(u["year"].ToString());
-            this.Rated = u["rated"].ToString();
-            this.Genre = u["genre"].ToString();
-            this.Director = u["director"].ToString();
-            this.Poster = u["poster"].ToString();
+        {
+            this.Title = u["Title"].ToString();
+            this.Year = int.Parse(u["Year"].ToString());
+            this.Rated = u["Rated"].ToString();
+            this.Genre = u["Genre"].ToString();
+            this.Director = u["Director"].ToString();
+            this.Poster = u["Poster"].ToString();
         }
     }
+}
 
 

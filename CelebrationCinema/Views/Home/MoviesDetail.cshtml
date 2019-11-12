@@ -1,4 +1,4 @@
-@model CelebrationAPI.Models.Movies
+@model CelebrationCinema.Models.Movies
 
 
 
@@ -6,7 +6,7 @@
     <form method="get" asp-controller="Home" asp-action="Favorites">
         <div class="Title">
 
-            <div class="font-weight-bold col-lg-1">ID: <input name="ImdbId" readonly value=" @Model.ImdbId" /></div>
+            
            <div class="font-weight-bold col-lg-1"> Title: <input  name="Title"readonly value="@Model.Title" /></div>     
             <div class="font-weight-bold col-lg-1" >Year:<input name="Year" readonly value="@Model.Year" /></div>         
             <div class="font-weight-bold col-lg-1">Rated: <input  name="Rated"readonly value="@Model.Rated" /></div>          
