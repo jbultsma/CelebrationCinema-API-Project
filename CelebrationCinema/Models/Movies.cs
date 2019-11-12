@@ -22,8 +22,7 @@ namespace CelebrationCinema.Models
         }
 
         public Movies(JToken u)
-        {
-            this.Id = int.Parse(u["Id"].ToString());
+        {            
             this.Title = u["title"].ToString();
             this.Year = int.Parse(u["year"].ToString());
             this.Rated = u["rated"].ToString();
