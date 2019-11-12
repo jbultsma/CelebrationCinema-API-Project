@@ -1,40 +1,33 @@
-@model CelebrationAPI.Models.Movies
-
-
+@model CelebrationCinema.Models.Movies
 
 <body>
+
     <form method="get" asp-controller="Home" asp-action="Favorites">
+
         <div class="Title">
 
-            <div class="font-weight-bold col-lg-1">ID: <input name="ImdbId" readonly value=" @Model.ImdbId" /></div>
-           <div class="font-weight-bold col-lg-1"> Title: <input  name="Title"readonly value="@Model.Title" /></div>     
-            <div class="font-weight-bold col-lg-1" >Year:<input name="Year" readonly value="@Model.Year" /></div>         
-            <div class="font-weight-bold col-lg-1">Rated: <input  name="Rated"readonly value="@Model.Rated" /></div>          
-            <div class="font-weight-bold col-lg-1">Genre:<input name="Genre" value="@Model.Genre" /></div>         
-            <div class="font-weight-bold col-lg-1">Director:<input name="Director" readonly value="@Model.Director" /></div>
-        
-            <br />
-            <div class="col-3" name="Poster" asp-for="Poster">
-  <img src="@Model.Poster" alt="Italian Trulli" width="200" height="300" />
-
-         </div>
             <br />
 
-            <p></p>
-            <p></p>
-
-            <input type="submit" value="Favorite" class="btn btn-primary" />
-            <input type="submit" value="Index" class="btn btn-primary" />
-
-
-</form>
+            <div>               Title: <input name="Title" readonly value="@Model.Title" /></div> <br />
+            <div>                Year:<input name="Year" readonly value="@Model.Year" /></div><br />
+            <div>                Rated: <input name="Rated" readonly value="@Model.Rated" /></div> <br />
+            <div>                Genre:<input name="Genre" value="@Model.Genre" /></div><br />
+            <div>Director:<input name="Director" readonly value="@Model.Director" /></div>
+            <br />
+            <di name="Poster" asp-for="Poster"> <img src="@Model.Poster" alt="Italian Trulli" width="200" height="300" />
+        </div>
+        <br />
+        <p></p>
+        <p></p>
+        <input type="submit" value="Favorite" class="btn btn-primary" />
+        <input type="submit" value="Index" class="btn btn-primary" />
+   </form>
 </body>
-
 <style>
-    body {
-        margin: 0;
-        background-image: url("Images/wood.jpeg");
-    }
+
+   
 </style>
+
+
 
 
