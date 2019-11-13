@@ -1,40 +1,76 @@
 @model CelebrationCinema.Models.Movies
-
-
-
-<body>
-    <form method="get" asp-controller="Home" asp-action="Favorites">
-        <div class="Title">
-
-            
-           <div class="font-weight-bold col-lg-1"> Title: <input  name="Title"readonly value="@Model.Title" /></div>     
-            <div class="font-weight-bold col-lg-1" >Year:<input name="Year" readonly value="@Model.Year" /></div>         
-            <div class="font-weight-bold col-lg-1">Rated: <input  name="Rated"readonly value="@Model.Rated" /></div>          
-            <div class="font-weight-bold col-lg-1">Genre:<input name="Genre" value="@Model.Genre" /></div>         
-            <div class="font-weight-bold col-lg-1">Director:<input name="Director" readonly value="@Model.Director" /></div>
-        
+@{
+    ViewData["Title"] = "MoviesDetail";
+}
+<h1>
+    @Html.DisplayFor(model => model.Title)
+</h1>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-lg-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-lg-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt class="col-lg-2">
+            @Html.DisplayNameFor(model => model.Rated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rated)
+        </dd>
+        <dt class="col-lg-2">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+        <dd class="col-lg-10">
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+        <div>
             <br />
-            <div class="col-3" name="Poster" asp-for="Poster">
-  <img src="@Model.Poster" alt="Italian Trulli" width="200" height="300" />
-
-         </div>
-            <br />
-
             <p></p>
             <p></p>
-
-            <input type="submit" value="Favorite" class="btn btn-primary" />
+            <p></p> <img src="@Model.Poster" alt="Italian Trulli" width="200" height="300" />
+            <br />
+        </div>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Add to Favorites", "AddMovie", new { }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+@*@model CelebrationCinema.Models.Movies
+    <body>
+        <form method="get" asp-controller="Home" asp-action="Favorites">
+            <div class="Title">
+                <br />
+                <div>               Title: <input name="Title" readonly value="@Model.Title" /></div> <br />
+                <div>                Year:<input name="Year" readonly value="@Model.Year" /></div><br />
+                <div>                Rated: <input name="Rated" readonly value="@Model.Rated" /></div> <br />
+                <div>                Genre:<input name="Genre" value="@Model.Genre" /></div><br />
+                <div>Director:<input name="Director" readonly value="@Model.Director" /></div>
+                <br />
+                <di name="Poster" asp-for="Poster"> <img src="@Model.Poster" alt="Italian Trulli" width="200" height="300" />
+            </div>
+            <br />
+            <p></p>
+            <p></p>
+            <input type="submit" action ="Favorites" value="Add to Favorite" class="btn btn-primary" />
             <input type="submit" value="Index" class="btn btn-primary" />
-
-
-</form>
-</body>
-
-<style>
-    body {
-        margin: 0;
-        background-image: url("Images/wood.jpeg");
-    }
-</style>
-
+       </form>
+    </body>
+    <style>
+    </style>*@
 

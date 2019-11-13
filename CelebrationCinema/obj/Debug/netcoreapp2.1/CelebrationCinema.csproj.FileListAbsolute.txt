@@ -33,3 +33,4 @@ C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcore
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.pdb
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\CelebrationCinema.csproj.CopyComplete
 C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\Razor\Views\Home\MoviesDetail.cshtml.g.cs
+C:\Dev\GC Graded Work\Labs\CelebrationCinema\CelebrationCinema\obj\Debug\netcoreapp2.1\Razor\Views\Home\Favorites.cshtml.g.cs
