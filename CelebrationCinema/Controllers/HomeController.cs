@@ -16,19 +16,15 @@ namespace CelebrationCinema.Controllers
     public class HomeController : Controller
     {
         MoviesContext db = new MoviesContext();
-        List<Movies> movies = new List<Movies>();
-        private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
 
-        public HomeController(MoviesContext context)
-        {
-            _context = context;
-        }
-
-        private readonly MoviesContext _context;        
+        
+        //private readonly MoviesContext _context;
+        
+        //public HomeController(MoviesContext context)
+        //{
+        //    _context = context;
+        //}
+          
 
         public string CallMovieAPI(string Title)
         {
@@ -76,17 +72,45 @@ namespace CelebrationCinema.Controllers
             {
                 return RedirectToAction(nameof(MoviesDetail));
             }
-        }    
+        }
 
-        public async Task<IActionResult> Delete(int? id)
+        //public IActionResult Delete(int Id)
+        //{
+        //    Movies m = db.Movie.Find(Id);
+        //    if (m != null)
+        //    {                
+        //        return View(m);
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction(nameof(Favorites));
+        //    }
+        //}
+
+        //public IActionResult Remove(int Id)
+        //{
+        //    Movies m = db.Movie.Find(Id);
+        //    if (m != null)
+        //    { 
+        //        db.Movie.Remove(m);
+        //        db.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Favorites));
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction(nameof(Delete));
+        //    }
+        //}
+
+        public async Task<IActionResult> Delete(int? Id)
         {
-            
-            if (id == null)
+
+            if (Id == null)
             {
                 return NotFound();
             }
-            var v = await _context.Movie
-               .FirstOrDefaultAsync(m => m.Id == id);
+            var v = await db.Movie
+               .FirstOrDefaultAsync(m => m.Id == Id);
 
             if (v == null)
             {
@@ -97,11 +121,11 @@ namespace CelebrationCinema.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
-        public async Task<IActionResult> Remove(string Title)
+        public async Task<IActionResult> Remove(int Id)
         {
-            var m = await _context.Movie.FindAsync(Title);
-            _context.Movie.Remove(m);
-            await _context.SaveChangesAsync();
+            var m = await db.Movie.FindAsync(Id);
+            db.Movie.Remove(m);
+            await db.SaveChangesAsync();
             return RedirectToAction(nameof(Favorites));
         }
 
