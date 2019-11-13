@@ -1,35 +1,4 @@
-﻿@*@model CelebrationCinema.Models.Movies
-
-@{
-    ViewData["Title"] = "Remove";
-}
-
-<h1>Do you want to remove this?</h1>
-
-<div>
-    <h4>Movie</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Year)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Rated)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Genre)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Remove From Favorites", "Remove", new { Title = @Model.Title }) |
-    <a asp-action="Index">Home</a>
-</div>*@
-
-@model CelebrationCinema.Models.Movies
+﻿@model CelebrationCinema.Models.Movies
 
     @{
         ViewData["Title"] = "Delete";
