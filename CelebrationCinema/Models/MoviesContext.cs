@@ -9,8 +9,13 @@ namespace CelebrationCinema.Models
 {
     public class MoviesContext : DbContext
     {
-        public DbSet<Movies> Movie { get; set; }
-        public object Movies { get; internal set; }
+        public MoviesContext()
+        {
+
+        }
+
+        public virtual DbSet<Movies> Movie { get; set; }
+        public object Movies { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
