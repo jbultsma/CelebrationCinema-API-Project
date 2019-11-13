@@ -190,7 +190,7 @@ Write(Html.ActionLink("Add to Favorites", "AddMovie", new { Title = @Model.Title
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1517, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f96bc5a986247a8b1f4029b2198b7f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e3a02e1a2364e099b1abff84902144a", async() => {
                 BeginContext(1539, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

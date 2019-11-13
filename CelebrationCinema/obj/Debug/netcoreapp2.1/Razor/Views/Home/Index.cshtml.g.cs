@@ -64,7 +64,7 @@ using CelebrationCinema.Models;
             WriteLiteral("<html>\r\n");
             EndContext();
             BeginContext(53, 3748, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f16396bfd5746618614e27fdc674eab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "730186468f6e40b881e0a735921531f3", async() => {
                 BeginContext(59, 3735, true);
                 WriteLiteral(@"
     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
@@ -238,12 +238,12 @@ using CelebrationCinema.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(3803, 596, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2f04dcb1ffb4225baa8b8d579d82405", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cf4d474ac12b4e1099df1440daee37ed", async() => {
                 BeginContext(3809, 66, true);
                 WriteLiteral("\r\n    <div class=\"bg-image\"></div>\r\n    <div id=\"cover\">\r\n        ");
                 EndContext();
                 BeginContext(3875, 503, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5eee92485854627876cee097da54312", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38cb9b7418df4a72aaed2ef1f000863e", async() => {
                     BeginContext(3920, 451, true);
                     WriteLiteral(@"
             <div class=""tb"">
