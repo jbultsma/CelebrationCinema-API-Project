@@ -66,7 +66,7 @@ using CelebrationCinema.Models;
             WriteLiteral("\r\n<h2>Favorites</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(133, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9796125602624fa292d052a4c5a84651", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afe22c4fb50744c6ba3d1030c5fe7f30", async() => {
                 BeginContext(156, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -202,7 +202,7 @@ using CelebrationCinema.Models;
             WriteLiteral("            <td>\r\n                ");
             EndContext();
             BeginContext(1545, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9ce507c21d64e829ef1872a8693c579", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46b2d9408c1040ff9275eb6a97e20a82", async() => {
                 BeginContext(1590, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -237,7 +237,7 @@ using CelebrationCinema.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1618, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7546da5ac9744bc8b17daa0490d57555", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d65dca7fdd1341b89e7496d59b33efc7", async() => {
                 BeginContext(1666, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -272,7 +272,7 @@ using CelebrationCinema.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1697, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "826295f474ff4bac8ebe40447fe074c8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6965c7c0508648289ba42ef66e68dc94", async() => {
                 BeginContext(1744, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

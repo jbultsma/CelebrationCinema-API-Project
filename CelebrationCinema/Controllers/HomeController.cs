@@ -23,6 +23,13 @@ namespace CelebrationCinema.Controllers
             _logger = logger;
         }
 
+        public HomeController(MoviesContext context)
+        {
+            _context = context;
+        }
+
+        private readonly MoviesContext _context;        
+
         public string CallMovieAPI(string Title)
         {
             HttpWebRequest request = WebRequest.CreateHttp($"http://www.omdbapi.com/?apikey=c794a6f9&t=" + Title);
@@ -69,6 +76,33 @@ namespace CelebrationCinema.Controllers
             {
                 return RedirectToAction(nameof(MoviesDetail));
             }
+        }    
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var v = await _context.Movie
+               .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (v == null)
+            {
+                return NotFound();
+            }
+
+            return View(v);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> Remove(string Title)
+        {
+            var m = await _context.Movie.FindAsync(Title);
+            _context.Movie.Remove(m);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Favorites));
         }
 
         public IActionResult Index()
