@@ -6,9 +6,6 @@
 
 <h2>Favorites</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -26,10 +23,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Director)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Poster)
-            </th>*@
+            </th>            
             <th></th>
         </tr>
     </thead>
@@ -50,13 +44,8 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Director)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Poster)
-            </td>*@
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+            </td>            
+            <td>                
                 <a asp-action="Delete" asp-route-id="@item.Id">Remove</a>
             </td>
         </tr>

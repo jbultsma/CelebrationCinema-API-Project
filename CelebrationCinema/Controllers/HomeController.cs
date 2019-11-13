@@ -16,16 +16,7 @@ namespace CelebrationCinema.Controllers
     public class HomeController : Controller
     {
         MoviesContext db = new MoviesContext();
-
-        
-        //private readonly MoviesContext _context;
-        
-        //public HomeController(MoviesContext context)
-        //{
-        //    _context = context;
-        //}
           
-
         public string CallMovieAPI(string Title)
         {
             HttpWebRequest request = WebRequest.CreateHttp($"http://www.omdbapi.com/?apikey=c794a6f9&t=" + Title);
@@ -46,9 +37,10 @@ namespace CelebrationCinema.Controllers
         {
             //TODO: Add if validation in case the movie is not listed or user missspells
             string text = CallMovieAPI(Title);
+            
             JToken t = JToken.Parse(text);
             Movies s = new Movies(t);
-            return View(s);
+            return View(s);            
         }
         
         public async Task<IActionResult> Favorites()
@@ -73,34 +65,6 @@ namespace CelebrationCinema.Controllers
                 return RedirectToAction(nameof(MoviesDetail));
             }
         }
-
-        //public IActionResult Delete(int Id)
-        //{
-        //    Movies m = db.Movie.Find(Id);
-        //    if (m != null)
-        //    {                
-        //        return View(m);
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction(nameof(Favorites));
-        //    }
-        //}
-
-        //public IActionResult Remove(int Id)
-        //{
-        //    Movies m = db.Movie.Find(Id);
-        //    if (m != null)
-        //    { 
-        //        db.Movie.Remove(m);
-        //        db.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Favorites));
-        //    }
-        //    else
-        //    {
-        //        return RedirectToAction(nameof(Delete));
-        //    }
-        //}
 
         public async Task<IActionResult> Delete(int? Id)
         {
